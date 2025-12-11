@@ -1,0 +1,38 @@
+---
+// src/components/FAQSection.astro
+// Importation d'un composant React (.jsx) dans un composant Astro
+import FAQItem from './react/FAQItem.jsx';
+
+const faqs = [
+    { 
+        question: "Combien de temps faut-il pour créer un site vitrine ?", 
+        answer: "Typiquement, un site vitrine est livré en 2 à 4 semaines, après validation du design et du contenu. Le facteur clé est votre réactivité pour fournir les éléments."
+    },
+    { 
+        question: "Mon site sera-t-il optimisé pour le mobile (Responsive) ?", 
+        answer: "Absolument. Tous les sites que je développe sont conçus avec une approche mobile-first, garantissant une expérience parfaite sur tous les appareils."
+    },
+    { 
+        question: "Comment mon site va-t-il m'aider à augmenter mes ventes ?", 
+        answer: "Grâce à une structure axée sur la conversion, un appel à l'action clair et une optimisation SEO dès la conception, votre site agira comme un commercial 24/7."
+    }
+];
+---
+
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">
+            Foire aux Questions
+        </h2>
+        
+        <div class="space-y-4">
+            {faqs.map((faq) => (
+                <FAQItem 
+                    client:load
+                    question={faq.question}
+                    answer={faq.answer}
+                />
+            ))}
+        </div>
+    </div>
+</section>
