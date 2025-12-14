@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro'; 
+
+const pageTitle = "À Propos de Moi | Votre Partenaire Web";
+const pageDescription = "Mon engagement est d'utiliser les technologies les plus rapides (Astro, Tailwind) pour garantir le succès commercial de votre entreprise.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+    <Header />
+    <main class="min-h-screen pt-16">
+        <div class="max-w-4xl mx-auto px-4 py-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-6">Ma Mission : Votre Croissance</h1>
+            <p class="text-lg text-gray-700 mb-4">
+                Je ne crée pas seulement des sites web. Je construis des outils de vente numériques. Fort de mon expérience avec des frameworks modernes (comme Next.js et maintenant Astro), je vous assure un site vitrine non seulement esthétique, mais surtout performant, qui augmente votre taux de conversion.
+            </p>
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Pourquoi choisir Astro ?</h2>
+            <p class="text-gray-700">
+                J'ai choisi Astro pour vos projets car c'est la meilleure technologie pour les sites vitrines : elle garantit un score de performance parfait et un temps de chargement minimal. C'est un avantage concurrentiel direct pour votre SEO.
+            </p>
+        </div>
+    </main>
+</BaseLayout>

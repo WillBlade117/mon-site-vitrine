@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro'; 
+
+const pageTitle = "Mon Portfolio | Réalisations Clients";
+const pageDescription = "Découvrez mes créations de sites vitrines qui ont permis à mes clients d'augmenter leur visibilité et leurs ventes.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+    <Header />
+    <main class="min-h-screen pt-16">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Mon Portfolio</h1>
+            <p class="text-lg text-gray-600 mb-10">
+                Chaque projet est une preuve de l'impact d'une vitrine performante.
+            </p>
+            
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg h-64 flex items-center justify-center">
+                    <p class="text-gray-500">Carte Projet 1 (à développer)</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg h-64 flex items-center justify-center">
+                    <p class="text-gray-500">Carte Projet 2 (à développer)</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</BaseLayout>

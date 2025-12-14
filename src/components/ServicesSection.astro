@@ -1,0 +1,47 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+const services = [
+    {
+        title: "Optimisation SEO Avancée",
+        description: "Je construis votre site sur des fondations techniques solides pour un référencement optimal, garantissant que vos clients vous trouvent avant la concurrence.",
+        icon: "🔍"
+    },
+    {
+        title: "Design Axé sur la Conversion",
+        description: "Chaque élément de design est pensé pour guider le visiteur vers l'action (appel, devis, achat). Votre site est un outil de vente, pas seulement une brochure.",
+        icon: "🎯"
+    },
+    {
+        title: "Vitesse et Performance Extrêmes",
+        description: "Grâce à Astro, vos pages se chargent instantanément. Un site rapide améliore le SEO et réduit le taux de rebond, augmentant l'engagement client.",
+        icon: "⚡"
+    },
+    {
+        title: "Mobile-First et Responsive",
+        description: "Capturez tous les clients. Votre site est conçu pour fonctionner parfaitement et inspirer confiance sur les téléphones, tablettes et ordinateurs, convertissant chaque visiteur.",
+        icon: "📱"
+    }
+];
+---
+
+<section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-4">
+            Comment Votre Vitrine Augmentera Vos Ventes
+        </h2>
+        <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Je me concentre sur les leviers numériques qui transforment la simple présence en ligne en revenu.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map(service => (
+                <ServiceCard 
+                    title={service.title} 
+                    description={service.description} 
+                    icon={service.icon} 
+                />
+            ))}
+        </div>
+    </div>
+</section>

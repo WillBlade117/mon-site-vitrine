@@ -1,9 +1,10 @@
 ---
-// src/pages/index.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import ServicesSection from '../components/ServicesSection.astro';
 import FAQItem from '../components/FAQSection.astro';
+import Contact from '../components/Contact.astro';
 
 const pageTitle = "Votre Site Vitrine | Création de Sites Web pour l'Augmentation des Ventes";
 const pageDescription = "Créez une présence en ligne puissante et professionnelle. Spécialiste des sites vitrine optimisés pour convertir vos visiteurs en clients.";
@@ -13,6 +14,8 @@ const pageDescription = "Créez une présence en ligne puissante et professionne
     <Header /> 
     <main>
         <Hero />
+        <ServicesSection />
         <FAQItem />
+        <Contact />
         </main>
     </BaseLayout>

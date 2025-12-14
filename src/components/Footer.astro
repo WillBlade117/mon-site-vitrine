@@ -1,0 +1,76 @@
+---
+// Les liens de navigation seront ajoutés ici
+const footerLinks = [
+    { title: 'Accueil', url: '/' },
+    { title: 'Portfolio', url: '/portfolio' },
+    { title: 'Services', url: '#services' },
+    { title: 'À Propos', url: '/a-propos' },
+];
+
+const legalLinks = [
+    { title: 'Mentions Légales', url: '/mentions-legales' },
+    { title: 'Politique de Confidentialité', url: '/politique-confidentialite' },
+];
+
+const contactInfo = {
+    email: 'contact@votrenom.com',
+    phone: '+33 1 23 45 67 89'
+};
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-10 mb-8">
+            
+            <div>
+                <a href="/" class="text-2xl font-bold text-indigo-400">
+                    [Votre Marque]
+                </a>
+                <p class="mt-3 text-sm text-gray-400">
+                    La performance au service de votre croissance.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Navigation</h3>
+                <nav class="space-y-3">
+                    {footerLinks.map(link => (
+                        <a href={link.url} class="block text-base text-gray-400 hover:text-indigo-400 transition duration-150">
+                            {link.title}
+                        </a>
+                    ))}
+                </nav>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Contact</h3>
+                <address class="space-y-3 not-italic">
+                    <a href={`mailto:${contactInfo.email}`} class="block text-base text-gray-400 hover:text-indigo-400 transition duration-150">
+                        {contactInfo.email}
+                    </a>
+                    <a href={`tel:${contactInfo.phone.replace(/ /g, '')}`} class="block text-base text-gray-400 hover:text-indigo-400 transition duration-150">
+                        {contactInfo.phone}
+                    </a>
+                </address>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Légal</h3>
+                <nav class="space-y-3">
+                    {legalLinks.map(link => (
+                        <a href={link.url} class="block text-base text-gray-400 hover:text-indigo-400 transition duration-150">
+                            {link.title}
+                        </a>
+                    ))}
+                </nav>
+            </div>
+
+        </div>
+        
+        <div class="text-center md:flex md:justify-between md:items-center text-sm text-gray-500">
+            <p>&copy; {currentYear} [Votre Marque]. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro'; 
+
+const pageTitle = "Mentions Légales - [Votre Marque]";
+const pageDescription = "Informations légales sur l'éditeur du site et l'hébergement.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+    <Header />
+    <main class="min-h-screen pt-16 pb-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-extrabold text-gray-900 mb-6 border-b pb-2">Mentions Légales</h1>
+            
+            <article class="space-y-6 text-gray-700">
+                
+                <section>
+                    <h2 class="text-xl font-bold text-gray-800 mb-3">1. Identification de l'Éditeur du Site</h2>
+                    <dl class="space-y-2">
+                        <div>
+                            <dt class="font-semibold">Nom de l'entreprise ou du porteur d'activité :</dt>
+                            <dd>[Votre Nom ou Nom Commercial/Micro-entreprise]</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold">Statut juridique :</dt>
+                            <dd>[Exemple : Micro-entreprise, SASU, etc.]</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold">Numéro d'immatriculation (SIRET/RCS) :</dt>
+                            <dd>[Votre Numéro de SIRET/RCS]</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold">Adresse du siège social :</dt>
+                            <dd>[Votre Adresse Complète]</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold">Adresse de courrier électronique :</dt>
+                            <dd>[Votre Email de Contact Professionnel]</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold">Numéro de téléphone :</dt>
+                            <dd>[Votre Numéro de Téléphone Professionnel]</dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-gray-800 mb-3">2. Directeur de la Publication</h2>
+                    <p>[Votre Nom et Prénom] (ou le responsable légal de l'activité).</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-gray-800 mb-3">3. Hébergement du Site</h2>
+                    <dl class="space-y-2">
+                        <div>
+                            <dt class="font-semibold">Hébergeur :</dt>
+                            <dd>[Nom de votre Hébergeur, ex : Vercel, Netlify, OVH]</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold">Adresse du siège social de l'hébergeur :</dt>
+                            <dd>[Adresse de l'Hébergeur]</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold">Contact de l'hébergeur :</dt>
+                            <dd>[Email ou Téléphone de contact de l'Hébergeur]</dd>
+                        </div>
+                    </dl>
+                </section>
+                
+                <section>
+                    <h2 class="text-xl font-bold text-gray-800 mb-3">4. Propriété Intellectuelle</h2>
+                    <p>L'ensemble du contenu de ce site ([Votre Nom de Domaine]) est la propriété exclusive de [Votre Nom ou Nom Commercial]. Toute reproduction, distribution ou utilisation non autorisée du contenu est strictement interdite.</p>
+                </section>
+                
+            </article>
+        </div>
+    </main>
+</BaseLayout>
