@@ -1,78 +1,81 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro'; 
 
-const pageTitle = "Mentions Légales - [Votre Marque]";
-const pageDescription = "Informations légales sur l'éditeur du site et l'hébergement.";
+const pageTitle = "Mentions Légales | Votre Studio Web";
+const pageDescription = "Informations légales sur l'éditeur du site et l'hébergement de votre partenaire web haute performance.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-    <Header />
-    <main class="min-h-screen pt-16 pb-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-extrabold text-gray-900 mb-6 border-b pb-2">Mentions Légales</h1>
+    <main class="min-h-screen pt-32 pb-20 bg-brand-dark text-slate-400">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <h1 class="text-4xl font-black text-white mb-12 tracking-tighter border-b border-white/10 pb-6">
+                Mentions <span class="text-brand-primary">Légales</span>
+            </h1>
             
-            <article class="space-y-6 text-gray-700">
+            <article class="space-y-12 font-light leading-relaxed">
                 
-                <section>
-                    <h2 class="text-xl font-bold text-gray-800 mb-3">1. Identification de l'Éditeur du Site</h2>
-                    <dl class="space-y-2">
+                <section class="group">
+                    <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-brand-primary"></span>
+                        1. Identification de l'Éditeur
+                    </h2>
+                    <dl class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white/[0.02] p-6 rounded-2xl border border-white/5">
                         <div>
-                            <dt class="font-semibold">Nom de l'entreprise ou du porteur d'activité :</dt>
-                            <dd>[Votre Nom ou Nom Commercial/Micro-entreprise]</dd>
+                            <dt class="text-white font-medium text-sm uppercase tracking-wider mb-1">Nom / Enseigne</dt>
+                            <dd class="text-slate-400">[Votre Nom / Micro-entreprise]</dd>
                         </div>
                         <div>
-                            <dt class="font-semibold">Statut juridique :</dt>
-                            <dd>[Exemple : Micro-entreprise, SASU, etc.]</dd>
+                            <dt class="text-white font-medium text-sm uppercase tracking-wider mb-1">Statut juridique</dt>
+                            <dd class="text-slate-400">[Micro-entreprise / SASU]</dd>
                         </div>
                         <div>
-                            <dt class="font-semibold">Numéro d'immatriculation (SIRET/RCS) :</dt>
-                            <dd>[Votre Numéro de SIRET/RCS]</dd>
+                            <dt class="text-white font-medium text-sm uppercase tracking-wider mb-1">SIRET / RCS</dt>
+                            <dd class="text-slate-400">[Votre Numéro]</dd>
                         </div>
                         <div>
-                            <dt class="font-semibold">Adresse du siège social :</dt>
-                            <dd>[Votre Adresse Complète]</dd>
-                        </div>
-                        <div>
-                            <dt class="font-semibold">Adresse de courrier électronique :</dt>
-                            <dd>[Votre Email de Contact Professionnel]</dd>
-                        </div>
-                        <div>
-                            <dt class="font-semibold">Numéro de téléphone :</dt>
-                            <dd>[Votre Numéro de Téléphone Professionnel]</dd>
+                            <dt class="text-white font-medium text-sm uppercase tracking-wider mb-1">Siège social</dt>
+                            <dd class="text-slate-400">[Votre Adresse]</dd>
                         </div>
                     </dl>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-bold text-gray-800 mb-3">2. Directeur de la Publication</h2>
-                    <p>[Votre Nom et Prénom] (ou le responsable légal de l'activité).</p>
+                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-brand-primary"></span>
+                        2. Publication
+                    </h2>
+                    <p class="pl-11">Directeur de la publication : <span class="text-white font-medium">[Votre Prénom Nom]</span>.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-bold text-gray-800 mb-3">3. Hébergement du Site</h2>
-                    <dl class="space-y-2">
-                        <div>
-                            <dt class="font-semibold">Hébergeur :</dt>
-                            <dd>[Nom de votre Hébergeur, ex : Vercel, Netlify, OVH]</dd>
-                        </div>
-                        <div>
-                            <dt class="font-semibold">Adresse du siège social de l'hébergeur :</dt>
-                            <dd>[Adresse de l'Hébergeur]</dd>
-                        </div>
-                        <div>
-                            <dt class="font-semibold">Contact de l'hébergeur :</dt>
-                            <dd>[Email ou Téléphone de contact de l'Hébergeur]</dd>
-                        </div>
-                    </dl>
+                    <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-brand-primary"></span>
+                        3. Hébergement
+                    </h2>
+                    <div class="pl-11 space-y-2">
+                        <p><strong class="text-white">Hébergeur :</strong> o2switch</p>
+                        <p><strong class="text-white">Adresse :</strong> Chem. des Pardiaux, 63000 Clermont-Ferrand</p>
+                        <p><strong class="text-white">Contact :</strong> 04 44 44 60 40</p>
+                    </div>
                 </section>
-                
+
                 <section>
-                    <h2 class="text-xl font-bold text-gray-800 mb-3">4. Propriété Intellectuelle</h2>
-                    <p>L'ensemble du contenu de ce site ([Votre Nom de Domaine]) est la propriété exclusive de [Votre Nom ou Nom Commercial]. Toute reproduction, distribution ou utilisation non autorisée du contenu est strictement interdite.</p>
+                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-brand-primary"></span>
+                        4. Propriété Intellectuelle
+                    </h2>
+                    <p class="pl-11">
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés par <span class="text-brand-primary font-medium">[Votre Nom]</span>.
+                    </p>
                 </section>
                 
             </article>
+
+            <div class="mt-20 pt-10 border-t border-white/5">
+                <a href="/" class="text-sm font-bold text-white hover:text-brand-primary transition-colors inline-flex items-center gap-2">
+                    ← Retour à l'accueil
+                </a>
+            </div>
         </div>
     </main>
 </BaseLayout>

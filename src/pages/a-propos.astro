@@ -1,23 +1,56 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro'; 
 
-const pageTitle = "À Propos de Moi | Votre Partenaire Web";
-const pageDescription = "Mon engagement est d'utiliser les technologies les plus rapides (Astro, Tailwind) pour garantir le succès commercial de votre entreprise.";
+const pageTitle = "À Propos | Mon Expertise Web Haute Performance";
+const pageDescription = "Découvrez comment j'utilise Astro et Tailwind pour transformer votre présence en ligne en un véritable levier de croissance.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-    <Header />
-    <main class="min-h-screen pt-16">
-        <div class="max-w-4xl mx-auto px-4 py-12">
-            <h1 class="text-4xl font-bold text-gray-900 mb-6">Ma Mission : Votre Croissance</h1>
-            <p class="text-lg text-gray-700 mb-4">
-                Je ne crée pas seulement des sites web. Je construis des outils de vente numériques. Fort de mon expérience avec des frameworks modernes (comme Next.js et maintenant Astro), je vous assure un site vitrine non seulement esthétique, mais surtout performant, qui augmente votre taux de conversion.
-            </p>
-            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Pourquoi choisir Astro ?</h2>
-            <p class="text-gray-700">
-                J'ai choisi Astro pour vos projets car c'est la meilleure technologie pour les sites vitrines : elle garantit un score de performance parfait et un temps de chargement minimal. C'est un avantage concurrentiel direct pour votre SEO.
-            </p>
+    <main class="bg-brand-dark min-h-screen pt-32 pb-20 relative overflow-hidden">
+        
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-primary/5 blur-[130px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <span class="text-brand-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
+                Expertise & Vision
+            </span>
+
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-10 tracking-tighter leading-[1.1]">
+                Ma Mission : <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">
+                    Votre Croissance Numérique.
+                </span>
+            </h1>
+
+            <div class="space-y-8 text-lg md:text-xl text-slate-400 font-light leading-relaxed">
+                <p>
+                    Je ne crée pas seulement des sites web. Je construis des <strong class="text-white font-bold tracking-tight">outils de vente numériques</strong>. 
+                </p>
+                
+                <p>
+                    Fort de mon expérience avec les frameworks les plus avancés du marché, je vous assure un site vitrine qui dépasse les standards actuels. Mon approche combine l'esthétique du design minimaliste et la puissance brute de l'ingénierie moderne.
+                </p>
+
+                <div class="py-8 border-l-2 border-brand-primary pl-8 my-12 bg-white/[0.02] rounded-r-2xl">
+                    <h2 class="text-2xl font-bold text-white mb-4 tracking-tight">
+                        Pourquoi je travaille avec Astro ?
+                    </h2>
+                    <p class="text-slate-300">
+                        J'ai choisi Astro car c'est l'arme absolue pour le SEO. En éliminant le JavaScript inutile, <strong class="text-brand-primary">je garantis</strong> un score de performance proche de 100/100. C'est un avantage concurrentiel direct que je mets au service de votre projet.
+                    </p>
+                </div>
+
+                <p>
+                    Chaque pixel que je pose est optimisé, chaque ligne de code est pensée pour une seule chose : transformer vos visiteurs en clients fidèles et augmenter votre chiffre d'affaires.
+                </p>
+            </div>
+
+            <div class="mt-16 pt-12 border-t border-white/5">
+                <a href="/" class="text-white hover:text-brand-primary transition-colors flex items-center gap-2 group font-bold">
+                    <span class="group-hover:-translate-x-1 transition-transform">←</span> 
+                    Retour à l'accueil
+                </a>
+            </div>
         </div>
     </main>
 </BaseLayout>

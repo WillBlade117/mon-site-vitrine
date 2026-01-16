@@ -9,30 +9,35 @@ const services = [
     },
     {
         title: "Design Axé sur la Conversion",
-        description: "Chaque élément de design est pensé pour guider le visiteur vers l'action (appel, devis, achat). Votre site est un outil de vente, pas seulement une brochure.",
+        description: "Chaque élément de design est pensé pour guider le visiteur vers l'action. Votre site est un outil de vente, pas seulement une brochure.",
         icon: "🎯"
     },
     {
         title: "Vitesse et Performance Extrêmes",
-        description: "Grâce à Astro, vos pages se chargent instantanément. Un site rapide améliore le SEO et réduit le taux de rebond, augmentant l'engagement client.",
+        description: "Grâce à Astro, vos pages se chargent instantanément. Un site rapide améliore le SEO et réduit le taux de rebond de manière drastique.",
         icon: "⚡"
     },
     {
         title: "Mobile-First et Responsive",
-        description: "Capturez tous les clients. Votre site est conçu pour fonctionner parfaitement et inspirer confiance sur les téléphones, tablettes et ordinateurs, convertissant chaque visiteur.",
+        description: "Capturez tous les clients. Votre site est conçu pour fonctionner parfaitement et inspirer confiance sur les téléphones, tablettes et ordinateurs.",
         icon: "📱"
     }
 ];
 ---
 
-<section id="services" class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-4">
-            Comment Votre Vitrine Augmentera Vos Ventes
-        </h2>
-        <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Je me concentre sur les leviers numériques qui transforment la simple présence en ligne en revenu.
-        </p>
+<section id="services" class="py-24 bg-brand-dark relative overflow-hidden">
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-primary/5 blur-[100px] rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tighter mb-6">
+                Comment Votre Vitrine <br class="hidden sm:inline" /> 
+                <span class="text-brand-primary font-black">Augmentera Vos Ventes</span>
+            </h2>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+                Je me concentre sur les leviers numériques qui transforment la simple présence en ligne en revenu concret.
+            </p>
+        </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map(service => (

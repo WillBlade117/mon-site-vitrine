@@ -1,28 +1,77 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro'; 
 
-const pageTitle = "Mon Portfolio | Réalisations Clients";
-const pageDescription = "Découvrez mes créations de sites vitrines qui ont permis à mes clients d'augmenter leur visibilité et leurs ventes.";
+const pageTitle = "Portfolio | Mes Réalisations Haute Performance";
+const pageDescription = "Découvrez comment j'aide mes clients à transformer leur présence en ligne en véritables moteurs de croissance.";
+
+const projects = [
+    {
+        title: "Projet Alpha",
+        category: "Site Vitrine Immobilier",
+        description: "Optimisation SEO et design minimaliste pour une agence de luxe.",
+        tech: ["Astro", "Tailwind", "SEO"],
+    },
+    {
+        title: "E-concept Studio",
+        category: "Landing Page SaaS",
+        description: "Création d'une interface ultra-rapide axée sur la conversion client.",
+        tech: ["React", "Astro", "Framer Motion"],
+    }
+];
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-    <Header />
-    <main class="min-h-screen pt-16">
-        <div class="max-w-7xl mx-auto px-4 py-12">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">Mon Portfolio</h1>
-            <p class="text-lg text-gray-600 mb-10">
-                Chaque projet est une preuve de l'impact d'une vitrine performante.
-            </p>
+    <main class="bg-brand-dark min-h-screen pt-32 pb-20 relative overflow-hidden">
+        
+        <div class="absolute -top-24 -left-24 w-[500px] h-[500px] bg-brand-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <header class="mb-16">
+                <span class="text-brand-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
+                    Études de cas
+                </span>
+                <h1 class="text-4xl md:text-7xl font-black text-white mb-6 tracking-tighter">
+                    Mes <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-emerald-400">Réalisations.</span>
+                </h1>
+                <p class="text-xl text-slate-400 max-w-2xl font-light leading-relaxed">
+                    Chaque projet est une preuve de l'impact d'une vitrine performante sur le chiffre d'affaires.
+                </p>
+            </header>
             
             <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-100 p-6 rounded-lg h-64 flex items-center justify-center">
-                    <p class="text-gray-500">Carte Projet 1 (à développer)</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg h-64 flex items-center justify-center">
-                    <p class="text-gray-500">Carte Projet 2 (à développer)</p>
-                </div>
+                {projects.map(project => (
+                    <div class="group relative bg-white/[0.02] border border-white/10 rounded-[32px] overflow-hidden hover:border-brand-primary/50 transition-all duration-500">
+                        <div class="h-72 bg-gradient-to-br from-brand-dark to-slate-900 flex items-center justify-center border-b border-white/10 overflow-hidden">
+                           <span class="text-slate-700 font-black text-5xl group-hover:scale-110 transition-transform duration-700 opacity-20 uppercase tracking-widest">{project.title}</span>
+                           </div>
+
+                        <div class="p-8">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                {project.tech.map(t => (
+                                    <span class="px-3 py-1 bg-brand-primary/10 text-brand-primary text-[10px] font-bold uppercase tracking-widest rounded-full">
+                                        {t}
+                                    </span>
+                                ))}
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-brand-primary transition-colors italic">{project.title}</h3>
+                            <p class="text-slate-400 font-light mb-6">{project.description}</p>
+                            
+                            <a href="#" class="inline-flex items-center gap-2 text-white font-bold text-sm group/link">
+                                Explorer le projet 
+                                <span class="group-hover/link:translate-x-1 transition-transform text-brand-primary">→</span>
+                            </a>
+                        </div>
+                    </div>
+                ))}
             </section>
+
+            <div class="mt-32 text-center py-20 border-y border-white/5">
+                <h2 class="text-3xl font-bold text-white mb-4 italic">Votre projet pourrait être le prochain.</h2>
+                <p class="text-slate-400 mb-10 font-light">Discutons de la manière dont je peux transformer votre vision en succès.</p>
+                <a href="#contact" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-brand-primary hover:text-white transition-all">
+                    Lancer une discussion
+                </a>
+            </div>
         </div>
     </main>
 </BaseLayout>

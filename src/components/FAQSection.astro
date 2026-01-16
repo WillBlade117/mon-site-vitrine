@@ -1,6 +1,5 @@
 ---
 // src/components/FAQSection.astro
-// Importation d'un composant React (.jsx) dans un composant Astro
 import FAQItem from './react/FAQItem.jsx';
 
 const faqs = [
@@ -19,13 +18,15 @@ const faqs = [
 ];
 ---
 
-<section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">
-            Foire aux Questions
+<section id="faq" class="py-24 bg-brand-dark relative overflow-hidden">
+    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-brand-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl sm:text-5xl font-black text-center text-white mb-16 tracking-tighter">
+            Réponses à vos <span class="text-brand-primary font-black">Interrogations</span>
         </h2>
         
-        <div class="space-y-4">
+        <div class="space-y-2 border-t border-white/10">
             {faqs.map((faq) => (
                 <FAQItem 
                     client:load
@@ -33,6 +34,14 @@ const faqs = [
                     answer={faq.answer}
                 />
             ))}
+        </div>
+
+        <div class="mt-20 text-center p-8 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-sm">
+            <p class="text-slate-400 mb-6 font-light">D'autres questions en tête ?</p>
+            <a href="#contact" class="text-white font-bold hover:text-brand-primary transition-colors flex items-center justify-center gap-2 group">
+                Parlons-en de vive voix 
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
         </div>
     </div>
 </section>
