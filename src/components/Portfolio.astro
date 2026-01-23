@@ -1,0 +1,177 @@
+---
+import { Image } from "astro:assets";
+import imgLeclat from "../assets/imgSiteLeclat.jpg";
+import imgDashboard from "../assets/imgDashboard.jpg";
+---
+
+<section id="portfolio" class="bg-artisan-bg py-24 md:py-32 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mb-20 max-w-2xl">
+      <h2 class="font-serif text-3xl font-bold text-artisan-text md:text-5xl">
+        Sélection de réalisations
+      </h2>
+      <p
+        class="mt-6 text-lg text-artisan-muted font-sans border-l-4 border-artisan-accent pl-4"
+      >
+        Chaque projet est une collaboration unique. Voici comment j'ai aidé mes
+        clients à atteindre leurs objectifs numériques.
+      </p>
+    </div>
+
+    <div class="space-y-24 md:space-y-32">
+      <div
+        class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center"
+      >
+        <div
+          class="relative group rounded-2xl overflow-hidden shadow-xl ring-1 ring-artisan-text/5 bg-gray-100 aspect-[4/3]"
+        >
+          <Image
+            src={imgLeclat}
+            alt="Photo site L'éclat pressing"
+            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            width={800}
+            format="webp"
+          />
+          <div
+            class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-artisan-text shadow-sm"
+          >
+            Site Vitrine
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <h3 class="font-serif text-3xl font-bold text-artisan-text mb-4">
+            Pressing L'Éclat
+          </h3>
+          <p class="text-artisan-accent font-medium font-sans mb-2">
+            Identité Numérique Premium
+          </p>
+          <p class="text-artisan-muted text-lg leading-relaxed mb-6 font-sans">
+            Refonte complète de l'image numérique d'un pressing haut de gamme.
+            L'objectif : transmettre la notion de pureté et d'exigence à travers
+            une interface épurée, tout en assurant une visibilité locale
+            maximale.
+          </p>
+
+          <div
+            class="grid grid-cols-2 gap-6 mb-8 border-y border-artisan-text/10 py-6"
+          >
+            <div>
+              <span
+                class="block text-3xl font-serif font-bold text-artisan-accent"
+                >100/100</span
+              >
+              <span class="text-sm text-artisan-muted">Score Performance</span>
+            </div>
+            <div>
+              <span
+                class="block text-3xl font-serif font-bold text-artisan-accent"
+                >0.4s</span
+              >
+              <span class="text-sm text-artisan-muted">Temps de chargement</span
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span
+              class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
+              >Astro</span
+            >
+            <span
+              class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
+              >Tailwind</span
+            >
+            <span
+              class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
+              >o2switch</span
+            >
+          </div>
+
+          <a
+            href="https://www.l-eclat.william-sart.fr"
+            target="_blank"
+            class="inline-flex items-center gap-2 text-artisan-accent font-semibold hover:text-artisan-accent-hover transition-colors"
+          >
+            Voir
+            <span class="text-xl">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center"
+      >
+        <div
+          class="relative group rounded-2xl overflow-hidden shadow-xl ring-1 ring-artisan-text/5 bg-gray-100 aspect-[4/3] lg:order-last"
+        >
+          <Image
+            src={imgDashboard}
+            alt="Photo dashboard"
+            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            width={800}
+            format="webp"
+          />
+          <div
+            class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-artisan-text shadow-sm"
+          >
+            App Web / SaaS
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <h3 class="font-serif text-3xl font-bold text-artisan-text mb-4">
+            Dashboard SaaS Analytics
+          </h3>
+          <p class="text-artisan-muted text-lg leading-relaxed mb-6 font-sans">
+            Développement d'une interface d'administration complexe pour gérer
+            des flux de données en temps réel. L'enjeu était la performance et
+            la clarté de l'information.
+          </p>
+
+          <div
+            class="grid grid-cols-2 gap-6 mb-8 border-y border-artisan-text/10 py-6"
+          >
+            <div>
+              <span
+                class="block text-3xl font-serif font-bold text-artisan-accent"
+                >100%</span
+              >
+              <span class="text-sm text-artisan-muted">Automatisé</span>
+            </div>
+            <div>
+              <span
+                class="block text-3xl font-serif font-bold text-artisan-accent"
+                >Secure</span
+              >
+              <span class="text-sm text-artisan-muted">Auth & Database</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span
+              class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
+              >Next.js</span
+            >
+            <span
+              class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
+              >React</span
+            >
+            <span
+              class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
+              >Supabase</span
+            >
+          </div>
+
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 text-artisan-accent font-semibold hover:text-artisan-accent-hover transition-colors"
+          >
+            Voir
+            <span class="text-xl">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

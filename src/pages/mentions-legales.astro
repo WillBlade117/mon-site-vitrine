@@ -1,81 +1,118 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Mentions Légales | Votre Studio Web";
-const pageDescription = "Informations légales sur l'éditeur du site et l'hébergement de votre partenaire web haute performance.";
+const pageTitle = "Mentions Légales | Transparence & Conformité";
+const pageDescription = "Mentions légales obligatoires et informations sur l'éditeur et l'hébergement du site.";
+const lastUpdate = "22 Janvier 2026";
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
-    <main class="min-h-screen pt-32 pb-20 bg-brand-dark text-slate-400">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <h1 class="text-4xl font-black text-white mb-12 tracking-tighter border-b border-white/10 pb-6">
-                Mentions <span class="text-brand-primary">Légales</span>
-            </h1>
-            
-            <article class="space-y-12 font-light leading-relaxed">
-                
-                <section class="group">
-                    <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                        <span class="w-8 h-[1px] bg-brand-primary"></span>
-                        1. Identification de l'Éditeur
-                    </h2>
-                    <dl class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white/[0.02] p-6 rounded-2xl border border-white/5">
-                        <div>
-                            <dt class="text-white font-medium text-sm uppercase tracking-wider mb-1">Nom / Enseigne</dt>
-                            <dd class="text-slate-400">[Votre Nom / Micro-entreprise]</dd>
-                        </div>
-                        <div>
-                            <dt class="text-white font-medium text-sm uppercase tracking-wider mb-1">Statut juridique</dt>
-                            <dd class="text-slate-400">[Micro-entreprise / SASU]</dd>
-                        </div>
-                        <div>
-                            <dt class="text-white font-medium text-sm uppercase tracking-wider mb-1">SIRET / RCS</dt>
-                            <dd class="text-slate-400">[Votre Numéro]</dd>
-                        </div>
-                        <div>
-                            <dt class="text-white font-medium text-sm uppercase tracking-wider mb-1">Siège social</dt>
-                            <dd class="text-slate-400">[Votre Adresse]</dd>
-                        </div>
-                    </dl>
-                </section>
+<Layout title={pageTitle} description={pageDescription}>
+  
+  <section class="pt-32 pb-12 px-6 bg-artisan-bg">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="inline-block text-artisan-accent font-bold tracking-widest uppercase text-sm mb-4">
+        Cadre Juridique
+      </span>
+      <h1 class="font-serif text-4xl md:text-5xl font-black text-artisan-text mb-6">
+        Mentions Légales
+      </h1>
+      <p class="text-lg text-artisan-muted font-sans max-w-xl mx-auto">
+        Parce que la confiance se construit sur la transparence. Voici les informations légales concernant l'éditeur et l'hébergeur de ce site.
+      </p>
+    </div>
+  </section>
 
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span class="w-8 h-[1px] bg-brand-primary"></span>
-                        2. Publication
-                    </h2>
-                    <p class="pl-11">Directeur de la publication : <span class="text-white font-medium">[William SART]</span>.</p>
-                </section>
+  <section class="pb-24 px-6 bg-artisan-bg">
+    <div class="mx-auto max-w-3xl space-y-12">
 
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                        <span class="w-8 h-[1px] bg-brand-primary"></span>
-                        3. Hébergement
-                    </h2>
-                    <div class="pl-11 space-y-2">
-                        <p><strong class="text-white">Hébergeur :</strong> o2switch</p>
-                        <p><strong class="text-white">Adresse :</strong> Chem. des Pardiaux, 63000 Clermont-Ferrand</p>
-                        <p><strong class="text-white">Contact :</strong> 04 44 44 60 40</p>
-                    </div>
-                </section>
+      <div class="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-artisan-text/5 relative overflow-hidden">
+        <div class="absolute left-0 top-0 bottom-0 w-2 bg-artisan-accent"></div>
+        
+        <h2 class="font-serif text-2xl font-bold text-artisan-text mb-6 flex items-center gap-3">
+          <span class="text-artisan-accent text-3xl">01.</span> Éditeur du Site
+        </h2>
 
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span class="w-8 h-[1px] bg-brand-primary"></span>
-                        4. Propriété Intellectuelle
-                    </h2>
-                    <p class="pl-11">
-                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés par <span class="text-brand-primary font-medium">[MA MARQUE]</span>.
-                    </p>
-                </section>
-                
-            </article>
-
-            <div class="mt-20 pt-10 border-t border-white/5">
-                <a href="/" class="text-sm font-bold text-white hover:text-brand-primary transition-colors inline-flex items-center gap-2">
-                    ← Retour à l'accueil
-                </a>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-sans text-artisan-muted">
+          <div class="space-y-4">
+            <div>
+              <p class="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Identité</p>
+              <p class="text-artisan-text font-bold text-lg">WILLIAM SART</p>
+              <p class="text-sm">Entrepreneur Individuel</p>
             </div>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Siège Social</p>
+              <p class="text-artisan-text">adresse complète</p>
+              <p class="text-artisan-text">code postal, ville</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <p class="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Immatriculation</p>
+              <p class="text-artisan-text font-bold">SIRET : En cours d'attribution</p>
+              <p class="text-artisan-text">Statut : Entreprise individuelle en cours d'immatriculation</p>
+              
+              <p class="text-artisan-text text-sm mt-1">TVA non applicable, art. 293 B du CGI</p>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Contact</p>
+              <a href="mailto:sart.william@gmail.com" class="text-artisan-accent hover:underline font-medium">sart.william@gmail.com</a>
+              <p class="text-artisan-text">+33 6 75 23 75 68</p>
+            </div>
+          </div>
         </div>
-    </main>
-</BaseLayout>
+      </div>
+
+      <div class="pl-4 md:pl-8 border-l-2 border-artisan-text/10">
+        <h2 class="font-serif text-2xl font-bold text-artisan-text mb-4">
+          02. Hébergement
+        </h2>
+        <p class="text-artisan-muted font-sans leading-relaxed mb-4">
+          Le site est hébergé sur des infrastructures françaises sécurisées.
+        </p>
+        <div class="bg-artisan-text text-white p-6 rounded-lg font-sans shadow-lg">
+          <p class="font-bold text-lg mb-2">o2switch SARL</p>
+          <p class="text-gray-300">Chemin des Pardiaux</p>
+          <p class="text-gray-300">63000 Clermont-Ferrand, France</p>
+          <p class="text-gray-300 mt-2">Tel : 04 44 44 60 40</p>
+          <p class="text-gray-300">Site web : <a href="https://www.o2switch.fr" target="_blank" class="text-artisan-accent hover:text-white transition-colors">www.o2switch.fr</a></p>
+        </div>
+      </div>
+
+      <div class="pl-4 md:pl-8 border-l-2 border-artisan-text/10">
+        <h2 class="font-serif text-2xl font-bold text-artisan-text mb-4">
+          03. Propriété Intellectuelle
+        </h2>
+        <div class="prose prose-brown text-artisan-muted font-sans leading-relaxed">
+          <p>
+            L’ensemble de ce site relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle. 
+            Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+          </p>
+          <p class="mt-4">
+            La reproduction de tout ou partie de ce site sur un support électronique quel qu’il soit est formellement interdite sauf autorisation expresse du directeur de la publication.
+          </p>
+        </div>
+      </div>
+
+      <div class="pl-4 md:pl-8 border-l-2 border-artisan-text/10">
+        <h2 class="font-serif text-2xl font-bold text-artisan-text mb-4">
+          04. Limitation de Responsabilité
+        </h2>
+        <div class="prose prose-brown text-artisan-muted font-sans leading-relaxed">
+          <p>
+            Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement remis à jour. 
+            Toutefois, il peut contenir des inexactitudes, des omissions ou des lacunes. Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, 
+            merci de bien vouloir le signaler par email, en décrivant le problème de la manière la plus précise possible.
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-artisan-text/10 text-center">
+        <p class="text-sm text-artisan-muted italic font-sans">
+          Dernière mise à jour des mentions légales : {lastUpdate}
+        </p>
+      </div>
+
+    </div>
+  </section>
+</Layout>

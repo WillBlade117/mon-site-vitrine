@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Page introuvable | 404";
+const pageDescription = "Oups, cette page n'existe pas.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 pt-32 text-center bg-artisan-bg relative overflow-hidden">
+    
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-artisan-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-2xl">
+      <h1 class="font-serif text-9xl font-black text-artisan-text/10 select-none">
+        404
+      </h1>
+      
+      <h2 class="mt-8 font-serif text-3xl font-bold text-artisan-text md:text-4xl">
+        Il semblerait que vous ayez pris un chemin de traverse.
+      </h2>
+      
+      <p class="mt-6 text-lg text-artisan-muted font-sans">
+        Cette page n'a pas encore été construite, ou alors elle a été déménagée.
+        Pas d'inquiétude, le chemin vers l'accueil est toujours ouvert.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/" class="px-8 py-4 bg-artisan-accent text-white rounded-lg font-bold hover:bg-artisan-accent-hover transition-colors shadow-lg shadow-artisan-accent/20">
+          Retourner à l'accueil
+        </a>
+        <a href="/#contact" class="px-8 py-4 text-artisan-text font-bold hover:bg-artisan-text/5 rounded-lg transition-colors">
+          Signaler un problème
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

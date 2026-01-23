@@ -1,21 +1,19 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
-import ServicesSection from '../components/ServicesSection.astro';
-import FAQItem from '../components/FAQSection.astro';
-import Contact from '../components/Contact.astro';
+import Services from '../components/Services.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Faq from '../components/Faq.astro';
 
-const pageTitle = "Votre Site Vitrine | Création de Sites Web pour l'Augmentation des Ventes";
-const pageDescription = "Créez une présence en ligne puissante et professionnelle. Spécialiste des sites vitrine optimisés pour convertir vos visiteurs en clients.";
+const pageTitle = "Création de Sites Web Haute Performance | William SART";
+const pageDescription = "Développeur web indépendant spécialisé Astro & Next.js. Je conçois des sites vitrines ultra-rapides et des applications sur-mesure pour transformer vos visiteurs en clients.";
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
-    <Header /> 
+<Layout title={pageTitle} description={pageDescription}>
     <main>
         <Hero />
-        <ServicesSection />
-        <FAQItem />
-        <Contact />
-        </main>
-    </BaseLayout>
+        <Services />
+        <Portfolio />
+        <Faq />
+    </main>
+</Layout>

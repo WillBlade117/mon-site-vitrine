@@ -3,16 +3,16 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
-			colors: {
-				brand: {
-					dark: '#0F172A',
-					primary: '#7C3AED',
-					accent: '#10B981',
-				}
-			},
 			fontFamily: {
-				sans: ['Inter Variable', 'sans-serif'],
-				display: ['CalSans', 'Inter Variable', 'sans-serif'],
+				serif: ['Merriweather', 'serif'],
+				sans: ['Inter', 'sans-serif'],
+			},
+			colors: {
+				'artisan-bg': '#FDFBF7',
+				'artisan-text': '#2C2420',
+				'artisan-muted': '#5E544F',
+				'artisan-accent': '#A64D2E',
+				'artisan-accent-hover': '#8A3F25',
 			}
 		},
 	},

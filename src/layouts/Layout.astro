@@ -1,6 +1,13 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/merriweather/700.css';
+import '@fontsource/merriweather/900.css';
 
 export interface Props {
     title: string;
@@ -37,10 +44,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={new URL(image, Astro.url)} />
     </head>
-    <body class="bg-brand-dark flex flex-col min-h-screen font-sans antialiased text-white">
-        <main class="flex-grow">
-            <slot />
-        </main>
+    
+    <body class="bg-artisan-bg text-artisan-text antialiased">
+        <Header />
+        
+        <slot />
+        
         <Footer />
     </body>
 </html>

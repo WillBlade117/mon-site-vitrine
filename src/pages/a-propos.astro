@@ -1,56 +1,190 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
 
-const pageTitle = "À Propos | Mon Expertise Web Haute Performance";
-const pageDescription = "Découvrez comment j'utilise Astro et Tailwind pour transformer votre présence en ligne en un véritable levier de croissance.";
+import imgWilliam from "../assets/imgWilliam.jpg";
+
+const pageTitle = "À Propos | L'Artisan derrière votre site web";
+const pageDescription = "Découvrez mon parcours, ma vision du web artisanal et pourquoi je refuse le code générique.";
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
-    <main class="bg-brand-dark min-h-screen pt-32 pb-20 relative overflow-hidden">
+<Layout title={pageTitle} description={pageDescription}>
+  
+  <section class="relative pt-32 pb-20 px-6 md:pt-48 md:pb-32 overflow-hidden">
+    <div class="mx-auto max-w-4xl text-center relative z-10">
+      <span class="mb-6 inline-block text-artisan-accent font-bold tracking-widest uppercase text-sm">
+        Mon Histoire
+      </span>
+      <h1 class="font-serif text-4xl font-black text-artisan-text md:text-6xl lg:text-7xl mb-8 leading-tight">
+        Je ne construis pas juste des sites. <br/>
+        <span class="italic text-artisan-muted font-normal">Je bâtis votre tranquillité d'esprit.</span>
+      </h1>
+      <p class="text-xl text-artisan-text/80 font-sans max-w-2xl mx-auto leading-relaxed">
+        Dans un monde numérique saturé de bruit et de complexité, j'ai choisi la voie de la clarté, de la performance et de l'humain.
+      </p>
+    </div>
+    
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-artisan-accent/5 rounded-full blur-3xl -z-0"></div>
+  </section>
+
+  <section class="py-20 px-6">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-primary/5 blur-[130px] rounded-full pointer-events-none"></div>
-
-        <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <span class="text-brand-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
-                Expertise & Vision
-            </span>
-
-            <h1 class="text-4xl md:text-6xl font-black text-white mb-10 tracking-tighter leading-[1.1]">
-                Ma Mission : <br/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">
-                    Votre Croissance Numérique.
-                </span>
-            </h1>
-
-            <div class="space-y-8 text-lg md:text-xl text-slate-400 font-light leading-relaxed">
-                <p>
-                    Je ne crée pas seulement des sites web. Je construis des <strong class="text-white font-bold tracking-tight">outils de vente numériques</strong>. 
-                </p>
-                
-                <p>
-                    Fort de mon expérience avec les frameworks les plus avancés du marché, je vous assure un site vitrine qui dépasse les standards actuels. Mon approche combine l'esthétique du design minimaliste et la puissance brute de l'ingénierie moderne.
-                </p>
-
-                <div class="py-8 border-l-2 border-brand-primary pl-8 my-12 bg-white/[0.02] rounded-r-2xl">
-                    <h2 class="text-2xl font-bold text-white mb-4 tracking-tight">
-                        Pourquoi je travaille avec Astro ?
-                    </h2>
-                    <p class="text-slate-300">
-                        J'ai choisi Astro car c'est l'arme absolue pour le SEO. En éliminant le JavaScript inutile, <strong class="text-brand-primary">je garantis</strong> un score de performance proche de 100/100. C'est un avantage concurrentiel direct que je mets au service de votre projet.
-                    </p>
-                </div>
-
-                <p>
-                    Chaque pixel que je pose est optimisé, chaque ligne de code est pensée pour une seule chose : transformer vos visiteurs en clients fidèles et augmenter votre chiffre d'affaires.
-                </p>
-            </div>
-
-            <div class="mt-16 pt-12 border-t border-white/5">
-                <a href="/" class="text-white hover:text-brand-primary transition-colors flex items-center gap-2 group font-bold">
-                    <span class="group-hover:-translate-x-1 transition-transform">←</span> 
-                    Retour à l'accueil
-                </a>
-            </div>
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-lg overflow-hidden bg-gray-200 relative z-10 shadow-xl ring-1 ring-artisan-text/5">
+            <Image
+            src={imgWilliam}
+            alt="Portrait de William"
+            class="w-full h-full object-cover"
+            width={800}
+            format="webp"
+            />
+          </div>
+          <div class="absolute inset-0 border-2 border-artisan-accent translate-x-4 translate-y-4 rounded-lg -z-0"></div>
         </div>
-    </main>
-</BaseLayout>
+
+        <div class="font-sans text-artisan-muted space-y-6 leading-loose">
+          <h2 class="font-serif text-3xl font-bold text-artisan-text mb-6">
+            De la passion technique à l'exigence artisanale.
+          </h2>
+          <p>
+            Mon parcours n'est pas linéaire, et c'est ce qui fait ma force. Pendant longtemps, j'ai évolué dans le monde du salariat. J'y ai appris la rigueur et le travail d'équipe, mais je sentais grandir en moi une envie différente : <strong>celle d'entreprendre et de bâtir mes propres projets.</strong>
+          </p>
+          <p>
+            En parallèle, le code a toujours été mon terrain de jeu. Ce qui n'était au départ que de la "bidouille" passionnée le soir et le week-end s'est transformé en une véritable expertise. J'aimais comprendre comment les choses fonctionnent sous le capot, assembler les briques, résoudre des problèmes logiques.
+          </p>
+          <p>
+            Un jour, l'équation est devenue évidente : pourquoi ne pas allier cette soif d'indépendance à ma passion pour le développement ?
+          </p>
+          <p>
+            Aujourd'hui, je ne suis pas un exécutant anonyme dans une grande tour de bureaux. Je suis un artisan indépendant. Cette liberté me permet de choisir mes outils non pas par contrainte, mais parce qu'ils sont les meilleurs pour garantir la performance et la pérennité de votre site.
+          </p>          <div class="pt-8">
+            <p class="font-serif text-2xl text-artisan-accent italic">William S.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-24 px-6 border-y border-artisan-text/5">
+    <div class="mx-auto max-w-5xl">
+      <div class="text-center mb-16">
+        <h2 class="font-serif text-3xl font-bold text-artisan-text">Mon Manifeste</h2>
+        <p class="mt-4 text-artisan-muted">Les principes qui guident chacun de mes projets.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="space-y-4">
+          <span class="text-4xl text-artisan-accent font-serif font-black">01.</span>
+          <h3 class="text-xl font-bold text-artisan-text font-serif">Simplicité Radicale</h3>
+          <p class="text-artisan-muted leading-relaxed">
+            Le superflu est l'ennemi. Je supprime tout ce qui n'apporte pas de valeur à votre business ou à vos utilisateurs. Moins de code, c'est moins de bugs et plus de vitesse.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <span class="text-4xl text-artisan-accent font-serif font-black">02.</span>
+          <h3 class="text-xl font-bold text-artisan-text font-serif">Transparence Totale</h3>
+          <p class="text-artisan-muted leading-relaxed">
+            Pas de jargon technique pour masquer la réalité. Je vous explique ce que je fais, pourquoi je le fais, et combien ça coûte. Nous sommes partenaires, pas juste prestataire-client.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <span class="text-4xl text-artisan-accent font-serif font-black">03.</span>
+          <h3 class="text-xl font-bold text-artisan-text font-serif">Qualité Durable</h3>
+          <p class="text-artisan-muted leading-relaxed">
+            Je ne construis pas des sites "jetables". J'utilise des technologies modernes et standardisées pour que votre site reste performant et maintenable dans 3, 5 ou 10 ans.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6">
+    <div class="mx-auto max-w-4xl bg-artisan-text text-artisan-bg rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+      <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-64 h-64 bg-artisan-accent opacity-20 rounded-full blur-2xl"></div>
+
+      <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+        <div class="flex-1 space-y-6">
+          <h2 class="font-serif text-3xl font-bold text-white">
+            Et quand je ne code pas ?
+          </h2>
+          <p class="text-gray-300 leading-relaxed font-sans">
+            L'équilibre est la clé de la performance. Quand je ne suis pas en train d'optimiser votre site, voici ce qui m'anime :
+          </p>
+          
+          <ul class="space-y-4 text-gray-300 font-sans">
+            
+            <li class="flex items-start gap-4">
+              <div class="mt-1 p-2 rounded-lg bg-white/10 text-artisan-accent">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path fill-rule="evenodd" d="M3 2.25a.75.75 0 01.75.75v.54l1.838-.46a9.75 9.75 0 016.725.738l.108.054a8.25 8.25 0 005.58.652l3.109-.732a.75.75 0 01.917.81 47.784 47.784 0 00.005 10.337.75.75 0 01-.574.812l-3.114.733a9.75 9.75 0 01-6.594-.158l-.108-.054a8.25 8.25 0 00-5.69-.625l-2.202.55V21a.75.75 0 01-1.5 0V3A.75.75 0 013 2.25z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <span class="block text-white font-bold mb-1">Formule 1</span>
+                <p class="text-sm text-gray-400">
+                  Je ne rate jamais un départ. Comme en code, c'est un monde où chaque détail compte et où l'optimisation technique fait la différence entre gagner ou perdre.
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4">
+              <div class="mt-1 p-2 rounded-lg bg-white/10 text-artisan-accent">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <span class="block text-white font-bold mb-1">Marche à pied</span>
+                <p class="text-sm text-gray-400">
+                  Mon rituel quotidien. Marcher est mon bouton "Reboot" : c'est souvent là, loin de l'écran, que je trouve les solutions aux problèmes complexes.
+                </p>
+              </div>
+            </li>
+
+             <li class="flex items-start gap-4">
+                <div class="mt-1 p-2 rounded-lg bg-white/10 text-artisan-accent">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                    <path fill-rule="evenodd" d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 00-.584.859 6.753 6.753 0 006.138 5.6 6.753 6.753 0 006.138-5.6.75.75 0 00-.584-.859 47.768 47.768 0 00-3.071-.543V2.62a.75.75 0 00-.933-.727 49.697 49.697 0 00-3.097.727.75.75 0 00-.936.001zM4.75 10.5h14.5a.75.75 0 01.75.75v1.5a.75.75 0 01-.75.75H4.75a.75.75 0 01-.75-.75v-1.5a.75.75 0 01.75-.75zM5.38 15.75h13.24a.75.75 0 01.75.75v4.5a.75.75 0 01-.75.75H5.38a.75.75 0 01-.75-.75v-4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-white font-bold mb-1">NBA</span>
+                  <p class="text-sm text-gray-400">
+                    Pour le suspense, le mouvement constant et la tactique. J'aime l'intensité d'un match qui se joue jusqu'au buzzer final.
+                  </p>
+                </div>
+              </li>
+
+               <li class="flex items-start gap-4">
+                <div class="mt-1 p-2 rounded-lg bg-white/10 text-artisan-accent">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                    <path d="M11.25 5.337c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.036 1.007-1.875 2.25-1.875S15 2.34 15 3.375c0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959 0 .332.278.598.61.578 1.91-.114 3.79-.342 5.632-.676a.75.75 0 01.878.645 49.17 49.17 0 01.376 5.452.657.657 0 01-.66.664c-.354 0-.675-.186-.958-.401a1.647 1.647 0 00-1.003-.349c-1.035 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401.31 0 .6.168.66.495a53.078 53.078 0 01-.48 6.075.75.75 0 01-.741.626A48.01 48.01 0 0115 19.336a.75.75 0 01-.61-.578c0-.355.186-.676.401-.959a1.647 1.647 0 00.349-1.003c0-1.035-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959a.75.75 0 01-.61.578 47.96 47.96 0 01-5.632-.676.75.75 0 01-.61-.578c0-.355.186-.676.401-.959a1.647 1.647 0 00.349-1.003c0-1.035-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959a.657.657 0 01-.66.664 49.17 49.17 0 01.376-5.452.75.75 0 01.878-.645 49.953 49.953 0 015.632.676.75.75 0 01.61-.578zM15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-white font-bold mb-1">Séries TV</span>
+                  <p class="text-sm text-gray-400">
+                    Grand consommateur d'histoires. Je m'immerge dans les scénarios complexes sans jamais être rassasié.
+                  </p>
+                </div>
+              </li>
+
+          </ul>
+        </div>
+        
+        <div class="flex-shrink-0 flex flex-col items-center justify-center gap-4 text-center">           
+          <p class="text-sm uppercase tracking-widest text-gray-500 font-bold">
+            Envie de travailler ensemble ?
+          </p>
+          <a href="/#contact" class="inline-block bg-white text-artisan-text font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
+            Me contacter
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

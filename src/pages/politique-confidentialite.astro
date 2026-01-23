@@ -1,97 +1,117 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Politique de Confidentialité | Respect de la vie privée";
-const pageDescription = "Engagement sur la protection de vos données personnelles et transparence totale sur l'absence de traceurs intrusifs.";
+const pageTitle = "Politique de Confidentialité | Vos Données";
+const pageDescription = "Comment je traite et protège vos données personnelles (RGPD).";
+const lastUpdate = "22 Janvier 2026";
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
-    <main class="min-h-screen pt-32 pb-20 bg-brand-dark text-slate-400">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <h1 class="text-4xl font-black text-white mb-6 tracking-tighter border-b border-white/10 pb-6">
-                Politique de <span class="text-brand-primary">Confidentialité</span>
-            </h1>
-            
-            <p class="text-[10px] uppercase tracking-widest text-brand-primary font-bold mb-12">
-                Dernière mise à jour : 18 Janvier 2026
-            </p>
-            
-            <article class="space-y-12 font-light leading-relaxed">
-                
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span class="w-8 h-[1px] bg-brand-primary"></span>
-                        1. Collecte des Données
-                    </h2>
-                    <p class="pl-11 mb-4">
-                        Ce site est conçu pour être le plus respectueux possible de votre vie privée. Je ne collecte des données personnelles que dans un seul cas : <strong class="text-white">lorsque vous remplissez volontairement le formulaire de contact.</strong>
-                    </p>
-                    <ul class="pl-11 space-y-4">
-                        <li class="flex gap-4">
-                            <span class="text-brand-primary font-bold">•</span>
-                            <span><strong class="text-white">Informations transmises :</strong> Votre nom, adresse e-mail et les détails de votre projet.</span>
-                        </li>
-                    </ul>
-                </section>
+<Layout title={pageTitle} description={pageDescription}>
+  
+  <section class="pt-32 pb-12 px-6 bg-artisan-bg">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="inline-block text-artisan-accent font-bold tracking-widest uppercase text-sm mb-4">
+        RGPD & Vie Privée
+      </span>
+      <h1 class="font-serif text-4xl md:text-5xl font-black text-artisan-text mb-6">
+        Politique de Confidentialité
+      </h1>
+      <p class="text-lg text-artisan-muted font-sans max-w-xl mx-auto">
+        Ici, pas de jargon complexe. Juste des explications claires sur les (rares) données que je collecte et comment je les protège.
+      </p>
+    </div>
+  </section>
 
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span class="w-8 h-[1px] bg-brand-primary"></span>
-                        2. Utilisation des Données
-                    </h2>
-                    <p class="pl-11">
-                        Ces informations me servent exclusivement à traiter votre demande, vous recontacter et établir un devis personnalisé. Je m'engage personnellement à <strong class="text-white">ne jamais revendre, louer ou partager</strong> vos données à des tiers à des fins commerciales.
-                    </p>
-                </section>
+  <section class="pb-24 px-6 bg-artisan-bg">
+    <div class="mx-auto max-w-3xl space-y-12">
 
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span class="w-8 h-[1px] bg-brand-primary"></span>
-                        3. Absence de Cookies & Traceurs
-                    </h2>
-                    <p class="pl-11">
-                        Pour garantir une performance maximale et un respect total de votre anonymat, <strong class="text-brand-primary font-medium">ce site n'utilise aucun cookie tiers</strong> (type Google Analytics, Facebook Pixel, etc.). 
-                    </p>
-                    <p class="pl-11 mt-4 italic text-sm">
-                        C'est pourquoi vous ne voyez aucune bannière de consentement intrusive sur ce site.
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span class="w-8 h-[1px] bg-brand-primary"></span>
-                        4. Vos Droits (RGPD)
-                    </h2>
-                    <p class="pl-11 mb-6">
-                        Conformément au RGPD, vous disposez d'un droit total d'accès, de modification et de suppression de vos données personnelles.
-                    </p>
-                    <div class="ml-11 p-6 bg-white/[0.02] border border-white/5 rounded-2xl">
-                        <p class="text-sm">
-                            Pour toute demande relative à vos données, contactez-moi directement à : 
-                            <a href="mailto:contact@ton-domaine.com" class="text-brand-primary font-medium hover:underline underline-offset-4">
-                                sart.william@gmail.com
-                            </a>
-                        </p>
-                    </div>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span class="w-8 h-[1px] bg-brand-primary"></span>
-                        5. Durée de Conservation
-                    </h2>
-                    <p class="pl-11">
-                        Si nous ne concluons pas de collaboration, vos données seront supprimées de mes fichiers dans un délai de 2 ans après notre dernier échange.
-                    </p>
-                </section>
-                
-            </article>
-
-            <div class="mt-20 pt-10 border-t border-white/5">
-                <a href="/" class="text-sm font-bold text-white hover:text-brand-primary transition-colors inline-flex items-center gap-2">
-                    ← Retour à l'accueil
-                </a>
-            </div>
+      <div class="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-artisan-text/5 relative overflow-hidden">
+        <h2 class="font-serif text-2xl font-bold text-artisan-text mb-6 flex items-center gap-3">
+          <span class="text-artisan-accent text-3xl">01.</span> Collecte des Données
+        </h2>
+        <p class="text-artisan-muted font-sans mb-6">
+          Je limite la collecte de données au strict nécessaire pour pouvoir travailler avec vous.
+        </p>
+        
+        <div class="bg-artisan-bg rounded-lg p-6 border border-artisan-text/10">
+          <h3 class="font-bold text-artisan-text mb-4 text-sm uppercase tracking-wide">Données traitées :</h3>          
+          <ul class="space-y-3 font-sans text-artisan-muted">            
+            <li class="flex items-baseline gap-3">
+              <span class="text-artisan-accent text-xs">●</span>
+              <span><strong>Identité :</strong> Nom, Prénom, ou Nom de l'entreprise (SIRET).</span>
+            </li>            
+            <li class="flex items-baseline gap-3">
+              <span class="text-artisan-accent text-xs">●</span>
+              <span><strong>Contact :</strong> Adresse email, numéro de téléphone.</span>
+            </li>           
+            <li class="flex items-baseline gap-3">
+              <span class="text-artisan-accent text-xs">●</span>
+              <span><strong>Facturation :</strong> Adresse postale complète (obligatoire pour l'établissement des factures conformément à la loi).</span>
+            </li>
+            <li class="flex items-baseline gap-3">
+              <span class="text-artisan-accent text-xs">●</span>
+              <span><strong>Projet :</strong> Les informations techniques que vous partagez concernant votre besoin.</span>
+            </li>            
+          </ul>
         </div>
-    </main>
-</BaseLayout>
+      </div>
+
+      <div class="pl-4 md:pl-8 border-l-2 border-artisan-text/10">
+        <h2 class="font-serif text-2xl font-bold text-artisan-text mb-4">
+          02. Cookies & Traceurs
+        </h2>
+        <div class="prose prose-brown text-artisan-muted font-sans leading-relaxed">
+          <p>
+            Ce site a été conçu avec une approche éthique. <strong>Je n'utilise aucun cookie publicitaire tiers</strong> (type Facebook Pixel ou traceurs de revente de données).
+          </p>
+          <p>
+            Les seuls cookies potentiels sont techniques et strictement nécessaires au bon fonctionnement du site (session, sécurité). Ils ne nécessitent pas de consentement légal car ils ne servent pas à vous pister.
+          </p>
+          <div class="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Navigation sans pistage publicitaire
+          </div>
+        </div>
+      </div>
+
+      <div class="pl-4 md:pl-8 border-l-2 border-artisan-text/10">
+        <h2 class="font-serif text-2xl font-bold text-artisan-text mb-4">
+          03. Utilisation & Partage
+        </h2>
+        <p class="text-artisan-muted font-sans leading-relaxed mb-4">
+          Les données que vous me confiez servent à un seul but : <strong>gérer notre relation commerciale</strong> (réponse aux devis, facturation, suivi de projet).
+        </p>
+        <p class="text-artisan-text font-bold font-serif italic text-lg border-l-4 border-artisan-accent pl-4 py-2 my-6 bg-white shadow-sm">
+          "Je ne revends, ne loue et ne partage jamais vos données personnelles à des tiers à des fins publicitaires."
+        </p>
+        <p class="text-artisan-muted font-sans leading-relaxed">
+          Les seuls tiers pouvant avoir accès techniquement à certaines données sont mes prestataires techniques stricts (comme mon hébergeur o2switch), qui sont eux-mêmes soumis au RGPD.
+        </p>
+      </div>
+
+      <div class="bg-artisan-text text-artisan-bg rounded-2xl p-8 shadow-lg">
+        <h2 class="font-serif text-2xl font-bold text-white mb-4">
+          04. Vos Droits
+        </h2>
+        <p class="text-gray-300 font-sans mb-6">
+          Conformément au RGPD, vous disposez d’un droit d’accès, de rectification et de suppression de vos données personnelles. Pour exercer ce droit, envoyez-moi simplement un message.
+        </p>
+        <a href="mailto:sart.william@gmail.com" class="inline-flex items-center gap-2 text-artisan-accent hover:text-white font-bold transition-colors border-b border-artisan-accent pb-1">
+          Exercer mes droits par email (sart.william@gmail.com)
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="pt-8 border-t border-artisan-text/10 text-center">
+        <p class="text-sm text-artisan-muted italic font-sans">
+          Dernière mise à jour : {lastUpdate}
+        </p>
+      </div>
+
+    </div>
+  </section>
+</Layout>
