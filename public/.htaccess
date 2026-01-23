@@ -1,0 +1,33 @@
+# 1. GESTION DES ERREURS
+ErrorDocument 404 /404.html
+
+# 2. SÉCURITÉ : EMPÊCHER LE LISTAGE DES DOSSIERS
+# Si un dossier n'a pas d'index.html, le serveur ne montrera pas la liste des fichiers
+Options -Indexes
+
+# 3. FORCER LE HTTPS (Cadenas Vert)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 4. EN-TÊTES DE SÉCURITÉ (HEADERS)
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 5. CACHE NAVIGATEUR (PERFORMANCE)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
