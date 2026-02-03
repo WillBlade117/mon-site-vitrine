@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import imgLeclat from "../assets/imgSiteLeclat.jpg";
-import imgDashboard from "../assets/imgDashboard.jpg";
+import imgSiteLAtelierArchi from "../assets/imgSiteLAtelierArchi.jpg";
 ---
 
 <section id="portfolio" class="bg-artisan-bg py-24 md:py-32 overflow-hidden">
@@ -106,8 +106,8 @@ import imgDashboard from "../assets/imgDashboard.jpg";
           class="relative group rounded-2xl overflow-hidden shadow-xl ring-1 ring-artisan-text/5 bg-gray-100 aspect-[4/3] lg:order-last"
         >
           <Image
-            src={imgDashboard}
-            alt="Photo dashboard"
+            src={imgSiteLAtelierArchi}
+            alt="Photo site L'atelier Archi"
             class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             width={800}
             format="webp"
@@ -115,18 +115,19 @@ import imgDashboard from "../assets/imgDashboard.jpg";
           <div
             class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-artisan-text shadow-sm"
           >
-            App Web / SaaS
+            Site Vitrine Administré
           </div>
         </div>
 
         <div class="flex flex-col justify-center">
           <h3 class="font-serif text-3xl font-bold text-artisan-text mb-4">
-            Dashboard Mirabelle
+            L'Atelier Archi
           </h3>
           <p class="text-artisan-muted text-lg leading-relaxed mb-6 font-sans">
-            Développement d'une interface d'administration complexe pour gérer
-            des flux de données en temps réel. L'enjeu était la performance et
-            la clarté de l'information.
+            Création d'une identité numérique haut de gamme pour un cabinet d'architecture. 
+            L'objectif était d'allier un design immersif à une vitesse de chargement 
+            instantanée, tout en offrant au client une indépendance totale pour gérer ses 
+            projets sans connaissances techniques.
           </p>
 
           <div
@@ -137,39 +138,40 @@ import imgDashboard from "../assets/imgDashboard.jpg";
                 class="block text-3xl font-serif font-bold text-artisan-accent"
                 >100%</span
               >
-              <span class="text-sm text-artisan-muted">Automatisé</span>
+              <span class="text-sm text-artisan-muted">Autonome</span>
             </div>
             <div>
               <span
                 class="block text-3xl font-serif font-bold text-artisan-accent"
-                >Secure</span
+                >Design</span
               >
-              <span class="text-sm text-artisan-muted">Auth & Database</span>
+              <span class="text-sm text-artisan-muted">Sur-mesure</span>
             </div>
           </div>
 
           <div class="flex flex-wrap gap-2 mb-8">
             <span
               class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
-              >Next.js</span
+              >Astro</span
             >
             <span
               class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
-              >React</span
+              >Tailwind</span
             >
             <span
               class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
-              >Supabase</span
+              >Keystatic</span
             >
           </div>
 
-          <!-- <a
-            href="#"
+          <a
+            href="https://www.l-atelier-archi.william-sart.fr"
+            target="_blank"
             class="inline-flex items-center gap-2 text-artisan-accent font-semibold hover:text-artisan-accent-hover transition-colors"
           >
             Voir
             <span class="text-xl">→</span>
-          </a> -->
+          </a>
         </div>
       </div>
     </div>

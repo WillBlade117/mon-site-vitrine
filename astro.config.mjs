@@ -9,6 +9,6 @@ import sitemap from '@astrojs/sitemap';
 
 
 export default defineConfig({
-  site: 'https://willaim-sart.fr',
+  site: 'https://william-sart.fr',
   integrations: [tailwind(), react(), sitemap()], 
 });

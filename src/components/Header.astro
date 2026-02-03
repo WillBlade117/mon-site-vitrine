@@ -6,10 +6,11 @@ const links = [
 ];
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-artisan-bg/90 backdrop-blur-md border-b border-artisan-text/5 transition-all duration-300">
-  <div class="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
+<header class="fixed top-0 left-0 right-0 z-50 h-20">
+  
+  <div class="relative z-50 w-full h-full bg-[#FDFBF7] border-b border-artisan-text/5 px-6 flex items-center justify-between">
     
-    <a href="/" class="z-50 font-serif text-2xl font-black tracking-tight text-artisan-text hover:opacity-80 transition-opacity">
+    <a href="/" class="font-serif text-2xl font-black tracking-tight text-artisan-text hover:opacity-80 transition-opacity">
       William SART<span class="text-artisan-accent">.</span>
     </a>
 
@@ -22,7 +23,6 @@ const links = [
           {link.name}
         </a>
       ))}
-      
       <a 
         href="/#contact" 
         class="rounded-lg bg-artisan-text px-5 py-2.5 text-sm font-semibold text-white hover:bg-artisan-accent transition-colors"
@@ -31,61 +31,79 @@ const links = [
       </a>
     </nav>
 
-    <button id="menu-btn" class="md:hidden z-50 p-2 text-artisan-text focus:outline-none" aria-label="Menu">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 menu-icon-open">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 menu-icon-close hidden">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-      </svg>
+    <button id="menu-btn" class="md:hidden p-2 focus:outline-none group" aria-label="Menu">
+      <div class="w-8 h-6 flex flex-col justify-between relative">
+        <span id="bar1" class="w-full h-0.5 bg-artisan-text rounded-full transition-all duration-300 origin-center"></span>
+        <span id="bar2" class="w-full h-0.5 bg-artisan-text rounded-full transition-all duration-300"></span>
+        <span id="bar3" class="w-full h-0.5 bg-artisan-text rounded-full transition-all duration-300 origin-center"></span>
+      </div>
     </button>
   </div>
 
-  <div id="mobile-menu" class="fixed inset-0 bg-artisan-bg z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-300 md:hidden">
-    {links.map((link) => (
+  <div 
+    id="mobile-menu" 
+    class="fixed inset-0 z-40 bg-[#FDFBF7] w-full h-screen flex flex-col items-center justify-start pt-32 gap-8 opacity-0 pointer-events-none transition-all duration-500 md:hidden"
+    style="margin-top: 0;"
+  >
+    <div class="flex flex-col items-center gap-10 w-full">
+      {links.map((link) => (
+        <a 
+          href={link.href} 
+          class="mobile-link text-3xl font-serif font-bold text-artisan-text hover:text-artisan-accent transition-colors relative z-50"
+        >
+          {link.name}
+        </a>
+      ))}
       <a 
-        href={link.href} 
-        class="text-2xl font-serif font-bold text-artisan-text hover:text-artisan-accent"
-        onclick="toggleMenu()"
+        href="/#contact" 
+        class="mobile-link mt-4 rounded-lg bg-artisan-accent px-8 py-4 text-lg font-bold text-white shadow-lg hover:bg-artisan-accent-hover transition-transform active:scale-95 relative z-50"
       >
-        {link.name}
+        Démarrer un projet
       </a>
-    ))}
-    <a 
-      href="/#contact" 
-      class="mt-4 rounded-lg bg-artisan-accent px-8 py-4 text-lg font-bold text-white"
-      onclick="toggleMenu()"
-    >
-      Démarrer un projet
-    </a>
+    </div>
   </div>
+
 </header>
 
 <script is:inline>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const iconOpen = document.querySelector('.menu-icon-open');
-  const iconClose = document.querySelector('.menu-icon-close');
-  let isMenuOpen = false;
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-  function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
-    
-    // Toggle visibilité menu
-    if (isMenuOpen) {
-      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-      iconOpen.classList.add('hidden');
-      iconClose.classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // Empêche le scroll
-    } else {
-      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-      iconOpen.classList.remove('hidden');
-      iconClose.classList.add('hidden');
-      document.body.style.overflow = ''; // Réactive le scroll
-    }
-  }
+        let isMenuOpen = false;
 
-  // Permettre l'appel de la fonction depuis les liens HTML
-  window.toggleMenu = toggleMenu;
-  menuBtn.addEventListener('click', toggleMenu);
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                bar1.classList.add('rotate-45', 'translate-y-[11px]');
+                bar2.classList.add('opacity-0');
+                bar3.classList.add('-rotate-45', '-translate-y-[11px]');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                bar1.classList.remove('rotate-45', 'translate-y-[11px]');
+                bar2.classList.remove('opacity-0');
+                bar3.classList.remove('-rotate-45', '-translate-y-[11px]');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleMenu();
+            });
+        }
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if(isMenuOpen) toggleMenu();
+            });
+        });
+    });
 </script>
