@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /404.html
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+Sitemap: https://william-sart.fr/sitemap-index.xml
