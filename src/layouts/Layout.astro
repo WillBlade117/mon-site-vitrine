@@ -17,6 +17,19 @@ export interface Props {
 
 const { title, description, image = '/og-image.jpg' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "William SART - Développeur Web",
+  "url": "https://william-sart.fr/",
+  "description": "Création de sites internet ultra-rapides et applications web sur-mesure.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://william-sart.fr/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+});
 ---
 
 <!doctype html>
@@ -43,6 +56,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+        <script type="application/ld+json" set:html={schema} />
     </head>
     
     <body class="bg-artisan-bg text-artisan-text antialiased">
