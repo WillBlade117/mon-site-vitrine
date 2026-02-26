@@ -1,6 +1,12 @@
 # 1. GESTION DES ERREURS
 ErrorDocument 404 /404.html
 
+Redirect 301 /onquiz /
+Redirect 301 /greenthumb /
+Redirect 301 /onbulle /
+Redirect 301 /CV_william_sart.pdf /
+Redirect 301 /portfolio /#portfolio
+
 # 2. SÉCURITÉ : EMPÊCHER LE LISTAGE DES DOSSIERS
 # Si un dossier n'a pas d'index.html, le serveur ne montrera pas la liste des fichiers
 Options -Indexes
