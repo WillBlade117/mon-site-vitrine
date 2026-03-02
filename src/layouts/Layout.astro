@@ -53,6 +53,20 @@ const schema = JSON.stringify({
         <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
         <script type="application/ld+json" set:html={schema} />
+        <script is:inline>
+            var _paq = window._paq = window._paq || [];
+            /* Désactivation stricte des cookies */
+            _paq.push(['disableCookies']);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+            var u="//stats.william-sart.fr/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
     </head>
     
     <body class="bg-artisan-bg text-artisan-text antialiased">
