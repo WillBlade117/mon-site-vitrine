@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 const pageTitle = "Mentions Légales | Transparence & Conformité";
 const pageDescription = "Mentions légales obligatoires et informations sur l'éditeur et l'hébergement du site.";
-const lastUpdate = "9 Février 2026";
+const lastUpdate = "3 Mars 2026";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -38,6 +38,7 @@ const lastUpdate = "9 Février 2026";
               <p class="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Identité</p>
               <p class="text-artisan-text font-bold text-lg">WILLIAM SART</p>
               <p class="text-sm">Entrepreneur Individuel</p>
+              <p class="text-sm mt-1"><strong>Directeur de la publication :</strong> William Sart</p>
             </div>
             <div>
               <p class="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Siège Social</p>
@@ -50,8 +51,7 @@ const lastUpdate = "9 Février 2026";
             <div>
               <p class="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Immatriculation</p>
               <p class="text-artisan-text font-bold">SIRET : 10096685200012</p>
-              <p class="text-artisan-text">Statut : Entrepreneur Individuel (Micro-entreprise)</p>
-              
+              <p class="text-artisan-text">Inscrit au Registre National des Entreprises (RNE)</p>
               <p class="text-artisan-text text-sm mt-1">TVA non applicable, art. 293 B du CGI</p>
             </div>
             <div>
@@ -67,15 +67,15 @@ const lastUpdate = "9 Février 2026";
         <h2 class="font-serif text-2xl font-bold text-artisan-text mb-4">
           02. Hébergement
         </h2>
-        <p class="text-artisan-muted font-sans leading-relaxed mb-4">
-          Le site est hébergé sur des infrastructures françaises sécurisées.
-        </p>
-        <div class="bg-artisan-text text-white p-6 rounded-lg font-sans shadow-lg">
-          <p class="font-bold text-lg mb-2">o2switch SARL</p>
-          <p class="text-gray-300">Chemin des Pardiaux</p>
-          <p class="text-gray-300">63000 Clermont-Ferrand, France</p>
-          <p class="text-gray-300 mt-2">Tel : 04 44 44 60 40</p>
-          <p class="text-gray-300">Site web : <a href="https://www.o2switch.fr" target="_blank" class="text-artisan-accent hover:text-white transition-colors">www.o2switch.fr</a></p>
+        <div class="prose prose-brown text-artisan-muted font-sans leading-relaxed">
+          <p>
+            Le site est hébergé par la société <strong>o2switch SARL</strong>.<br>
+            Siège social : Chemin des Pardiaux, 63000 Clermont-Ferrand, France.<br>
+            Téléphone : 04 44 44 60 40.
+          </p>
+          <p class="text-sm italic mt-4 px-4 py-3 bg-white rounded-lg border border-artisan-text/5">
+            <strong>Note à mes clients :</strong> Dans le cadre de mes prestations de création, je me charge intégralement de la location de l'espace serveur, de sa configuration technique, de sa sécurisation et de la maintenance de vos sites sur ces infrastructures françaises.
+          </p>
         </div>
       </div>
 
@@ -96,13 +96,16 @@ const lastUpdate = "9 Février 2026";
 
       <div class="pl-4 md:pl-8 border-l-2 border-artisan-text/10">
         <h2 class="font-serif text-2xl font-bold text-artisan-text mb-4">
-          04. Limitation de Responsabilité
+          04. Responsabilité & Juridiction
         </h2>
         <div class="prose prose-brown text-artisan-muted font-sans leading-relaxed">
           <p>
             Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement remis à jour. 
             Toutefois, il peut contenir des inexactitudes, des omissions ou des lacunes. Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, 
             merci de bien vouloir le signaler par email, en décrivant le problème de la manière la plus précise possible.
+          </p>
+          <p class="mt-4">
+            Tout litige en relation avec l'utilisation du site <strong>william-sart.fr</strong> est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents du siège social de l'éditeur.
           </p>
         </div>
       </div>
