@@ -27,13 +27,13 @@ const lastUpdate = "22 Janvier 2026";
 
       <div class="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-artisan-text/5 relative overflow-hidden">
         <h2 class="font-serif text-2xl font-bold text-artisan-text mb-6 flex items-center gap-3">
-          <span class="text-artisan-accent text-3xl">01.</span> Collecte des Données
+          <span class="text-artisan-accent text-3xl">01.</span> Collecte et Conservation
         </h2>
         <p class="text-artisan-muted font-sans mb-6">
           Je limite la collecte de données au strict nécessaire pour pouvoir travailler avec vous.
         </p>
         
-        <div class="bg-artisan-bg rounded-lg p-6 border border-artisan-text/10">
+        <div class="bg-artisan-bg rounded-lg p-6 border border-artisan-text/10 mb-6">
           <h3 class="font-bold text-artisan-text mb-4 text-sm uppercase tracking-wide">Données traitées :</h3>          
           <ul class="space-y-3 font-sans text-artisan-muted">            
             <li class="flex items-baseline gap-3">
@@ -43,10 +43,10 @@ const lastUpdate = "22 Janvier 2026";
             <li class="flex items-baseline gap-3">
               <span class="text-artisan-accent text-xs">●</span>
               <span><strong>Contact :</strong> Adresse email, numéro de téléphone.</span>
-            </li>           
+            </li>          
             <li class="flex items-baseline gap-3">
               <span class="text-artisan-accent text-xs">●</span>
-              <span><strong>Facturation :</strong> Adresse postale complète (obligatoire pour l'établissement des factures conformément à la loi).</span>
+              <span><strong>Facturation :</strong> Adresse postale (obligatoire pour l'établissement des factures).</span>
             </li>
             <li class="flex items-baseline gap-3">
               <span class="text-artisan-accent text-xs">●</span>
@@ -54,25 +54,79 @@ const lastUpdate = "22 Janvier 2026";
             </li>            
           </ul>
         </div>
+
+        <div class="bg-artisan-bg rounded-lg p-6 border border-artisan-text/10">
+          <h3 class="font-bold text-artisan-text mb-4 text-sm uppercase tracking-wide">Durée de conservation :</h3>          
+          <ul class="space-y-3 font-sans text-artisan-muted">            
+            <li class="flex items-baseline gap-3">
+              <span class="text-artisan-accent text-xs">●</span>
+              <span><strong>Documents comptables (Devis/Factures) :</strong> 10 ans (obligation légale).</span>
+            </li>            
+            <li class="flex items-baseline gap-3">
+              <span class="text-artisan-accent text-xs">●</span>
+              <span><strong>Données de prospection / Contact :</strong> 3 ans après notre dernier échange.</span>
+            </li>          
+          </ul>
+        </div>
       </div>
 
       <div class="pl-4 md:pl-8 border-l-2 border-artisan-text/10">
         <h2 class="font-serif text-2xl font-bold text-artisan-text mb-4">
-          02. Cookies & Traceurs
+          02. Statistiques & Traceurs
         </h2>
         <div class="prose prose-brown text-artisan-muted font-sans leading-relaxed">
           <p>
             Ce site a été conçu avec une approche éthique. <strong>Je n'utilise aucun cookie publicitaire tiers</strong> (type Facebook Pixel ou traceurs de revente de données).
           </p>
           <p>
-            Les seuls cookies potentiels sont techniques et strictement nécessaires au bon fonctionnement du site (session, sécurité). Ils ne nécessitent pas de consentement légal car ils ne servent pas à vous pister.
+            Pour adapter ce site aux demandes de ses visiteurs et améliorer votre expérience, je mesure le nombre de visites et l'activité via <strong>Matomo</strong>, un outil libre hébergé sur mes propres serveurs en France.
           </p>
-          <div class="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-bold">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-            </svg>
-            Navigation sans pistage publicitaire
-          </div>
+          <p>
+            Cet outil est paramétré pour être en totale conformité avec les recommandations de la CNIL et est donc <strong>exempté du recueil de consentement</strong> (pas de bandeau cookies). Votre adresse IP est anonymisée, rendant impossible votre identification technique.
+          </p>
+          
+          <div class="mt-6 p-6 bg-white rounded-lg border border-artisan-text/10 shadow-sm">
+            <h3 class="text-sm font-bold text-artisan-text mb-3 uppercase tracking-wide">Droit d'opposition (Opt-out) :</h3>
+            <p class="text-sm mb-4">Bien que ce suivi soit totalement anonyme, vous pouvez choisir de ne pas être comptabilisé dans nos statistiques de trafic :</p>
+            
+            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200 flex items-start gap-3">
+              <input 
+                type="checkbox" 
+                id="matomo-optout" 
+                class="mt-1 w-5 h-5 text-artisan-accent border-gray-300 rounded focus:ring-artisan-accent" 
+                checked 
+              />
+              <label for="matomo-optout" class="text-sm text-artisan-muted cursor-pointer" id="optout-text">
+                Vous êtes actuellement suivi(e) de manière anonyme. Décochez cette case pour vous exclure du suivi.
+              </label>
+            </div>
+
+            <script is:inline>
+              document.addEventListener('DOMContentLoaded', function() {
+                const checkbox = document.getElementById('matomo-optout');
+                const labelText = document.getElementById('optout-text');
+
+                if (typeof _paq !== 'undefined') {
+                  _paq.push([function() {
+                    if (this.isUserOptedOut()) {
+                      checkbox.checked = false;
+                      labelText.textContent = "Vous êtes actuellement exclu(e) du suivi. Cochez cette case pour réactiver le suivi anonyme.";
+                    }
+                  }]);
+
+                  checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                      _paq.push(['forgetUserOptOut']);
+                      labelText.textContent = "Vous êtes actuellement suivi(e) de manière anonyme. Décochez cette case pour vous exclure du suivi.";
+                    } else {
+                      _paq.push(['optUserOut']);
+                      labelText.textContent = "Vous êtes actuellement exclu(e) du suivi. Cochez cette case pour réactiver le suivi anonyme.";
+                    }
+                  });
+                }
+              });
+            </script>
+            </div>
         </div>
       </div>
 
@@ -81,13 +135,13 @@ const lastUpdate = "22 Janvier 2026";
           03. Utilisation & Partage
         </h2>
         <p class="text-artisan-muted font-sans leading-relaxed mb-4">
-          Les données que vous me confiez servent à un seul but : <strong>gérer notre relation commerciale</strong> (réponse aux devis, facturation, suivi de projet).
+          Les données que vous me confiez servent à un seul but : <strong>gérer notre relation commerciale</strong> (réponse aux devis, création de votre projet, facturation et maintenance).
         </p>
         <p class="text-artisan-text font-bold font-serif italic text-lg border-l-4 border-artisan-accent pl-4 py-2 my-6 bg-white shadow-sm">
           "Je ne revends, ne loue et ne partage jamais vos données personnelles à des tiers à des fins publicitaires."
         </p>
         <p class="text-artisan-muted font-sans leading-relaxed">
-          Les seuls tiers pouvant avoir accès techniquement à certaines données sont mes prestataires techniques stricts (comme mon hébergeur o2switch), qui sont eux-mêmes soumis au RGPD.
+          Les seuls tiers pouvant avoir accès techniquement à certaines données sont mes prestataires techniques stricts (comme mon hébergeur o2switch en France), qui sont eux-mêmes soumis au RGPD.
         </p>
       </div>
 
@@ -108,7 +162,7 @@ const lastUpdate = "22 Janvier 2026";
 
       <div class="pt-8 border-t border-artisan-text/10 text-center">
         <p class="text-sm text-artisan-muted italic font-sans">
-          Dernière mise à jour : {lastUpdate}
+          Dérière mise à jour : {lastUpdate}
         </p>
       </div>
 
