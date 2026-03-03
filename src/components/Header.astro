@@ -65,7 +65,7 @@ const links = [
 
 </header>
 
-<script is:inline>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -73,32 +73,35 @@ const links = [
         const bar2 = document.getElementById('bar2');
         const bar3 = document.getElementById('bar3');
         const mobileLinks = document.querySelectorAll('.mobile-link');
-
+        
         let isMenuOpen = false;
 
         function toggleMenu() {
             isMenuOpen = !isMenuOpen;
+            
             if (isMenuOpen) {
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                bar1.classList.add('rotate-45', 'translate-y-[11px]');
-                bar2.classList.add('opacity-0');
-                bar3.classList.add('-rotate-45', '-translate-y-[11px]');
+                mobileMenu?.classList.remove('opacity-0', 'pointer-events-none');
+                bar1?.classList.add('rotate-45', 'translate-y-[11px]');
+                bar2?.classList.add('opacity-0');
+                bar3?.classList.add('-rotate-45', '-translate-y-[11px]');
                 document.body.style.overflow = 'hidden';
+                menuBtn?.setAttribute('aria-expanded', 'true');
             } else {
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                bar1.classList.remove('rotate-45', 'translate-y-[11px]');
-                bar2.classList.remove('opacity-0');
-                bar3.classList.remove('-rotate-45', '-translate-y-[11px]');
+                mobileMenu?.classList.add('opacity-0', 'pointer-events-none');
+                bar1?.classList.remove('rotate-45', 'translate-y-[11px]');
+                bar2?.classList.remove('opacity-0');
+                bar3?.classList.remove('-rotate-45', '-translate-y-[11px]');
                 document.body.style.overflow = 'auto';
+                menuBtn?.setAttribute('aria-expanded', 'false');
             }
         }
 
-        if (menuBtn) {
-            menuBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleMenu();
-            });
-        }
+        menuBtn?.setAttribute('aria-expanded', 'false');
+        
+        menuBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
