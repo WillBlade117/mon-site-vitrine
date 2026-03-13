@@ -17,14 +17,6 @@ export interface Props {
 
 const { title, description, image = '/og-image.jpg' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "William SART - Développeur Web",
-  "url": "https://william-sart.fr/",
-  "description": "Création de sites internet ultra-rapides et applications web sur-mesure.",
-});
 ---
 
 <!doctype html>
@@ -52,7 +44,27 @@ const schema = JSON.stringify({
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-        <script type="application/ld+json" set:html={schema} />
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "William SART - Développeur Web",
+            "image": "https://www.william-sart.fr/og-image.jpg",
+            "description": "Développeur web freelance basé à Carros (06). Création de sites vitrines et applications métiers sur-mesure pour les TPE et artisans.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Carros",
+              "postalCode": "06510",
+              "addressRegion": "Provence-Alpes-Côte d'Azur",
+              "addressCountry": "FR"
+            },
+            "url": "https://www.william-sart.fr",
+            "telephone": "+33675237568",
+            "priceRange": "€€",
+            "areaServed": ["Carros", "Nice", "Alpes-Maritimes", "Grasse", "Cannes"]
+          }
+        </script>
+
         <script is:inline>
             var _paq = window._paq = window._paq || [];
             /* Désactivation stricte des cookies */
