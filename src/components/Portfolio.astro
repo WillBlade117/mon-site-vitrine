@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import imgLeclat from "../assets/imgSiteLeclat.jpg";
+// On remplace l'ancienne image par la nouvelle
+import imgPressingBrignoles from "../assets/imgPressingBrignoles.jpg";
 import imgSiteLAtelierArchi from "../assets/imgSiteLAtelierArchi.jpg";
 ---
 
@@ -8,18 +9,19 @@ import imgSiteLAtelierArchi from "../assets/imgSiteLAtelierArchi.jpg";
   <div class="mx-auto max-w-7xl px-6">
     <div class="mb-20 max-w-2xl">
       <h2 class="font-serif text-3xl font-bold text-artisan-text md:text-5xl">
-        Démonstrateurs & Savoir-faire
+        Réalisations & Savoir-faire
       </h2>
       <p
         class="mt-6 text-lg text-artisan-muted font-sans border-l-4 border-artisan-accent pl-4"
       >
-        Découvrez des exemples concrets de ce que nous pouvons construire ensemble. 
-        Ces projets de démonstration illustrent les standards de qualité, de design 
-        et de performance que j'applique à chaque création.
+        Découvrez une sélection de projets clients et de démonstrateurs techniques. 
+        L'objectif est toujours le même : allier un design qui inspire confiance à des 
+        performances techniques redoutables pour développer votre activité.
       </p>
     </div>
 
     <div class="space-y-24 md:space-y-32">
+      
       <div
         class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center"
       >
@@ -27,28 +29,28 @@ import imgSiteLAtelierArchi from "../assets/imgSiteLAtelierArchi.jpg";
           class="relative group rounded-2xl overflow-hidden shadow-xl ring-1 ring-artisan-text/5 bg-gray-100 aspect-[4/3]"
         >
           <Image
-            src={imgLeclat}
-            alt="Démonstrateur site L'éclat pressing"
+            src={imgPressingBrignoles}
+            alt="Site internet Pressing Saint Jean à Brignoles"
             class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             width={800}
             format="webp"
           />
           <div
-            class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-artisan-text shadow-sm"
+            class="absolute top-4 left-4 bg-artisan-accent text-white backdrop-blur-sm px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm"
           >
-            Concept Sur-Mesure
+            Projet Client
           </div>
         </div>
 
         <div class="flex flex-col justify-center">
           <h3 class="font-serif text-3xl font-bold text-artisan-text mb-4">
-            Pressing L'Éclat
+            Pressing Saint Jean
           </h3>
           <p class="text-artisan-accent font-medium font-sans mb-2">
-            Identité Numérique Premium
+            Acquisition de clientèle & SEO Local
           </p>
           <p class="text-artisan-muted text-lg leading-relaxed mb-6 font-sans">
-            Démonstrateur technique conçu pour illustrer les besoins d'un commerce de proximité haut de gamme. L'objectif : prouver qu'une interface épurée peut s'allier à des performances techniques extrêmes pour maximiser la visibilité locale (SEO).
+            Suite au rachat de l'entreprise, l'objectif du gérant était clair : se démarquer de son concurrent de quartier et capter un maximum de nouveaux clients à Brignoles. J'ai conçu un site moderne, "mobile-first" et extrêmement rapide, pensé pour dominer les résultats de recherche locale sur Google.
           </p>
 
           <div
@@ -64,13 +66,17 @@ import imgSiteLAtelierArchi from "../assets/imgSiteLAtelierArchi.jpg";
             <div>
               <span
                 class="block text-3xl font-serif font-bold text-artisan-accent"
-                >0.4s</span
+                >Mobile</span
               >
-              <span class="text-sm text-artisan-muted">Temps de chargement</span>
+              <span class="text-sm text-artisan-muted">Design prioritaire</span>
             </div>
           </div>
 
           <div class="flex flex-wrap gap-2 mb-8">
+            <span
+              class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
+              >SEO Local</span
+            >
             <span
               class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
               >Astro</span
@@ -79,18 +85,14 @@ import imgSiteLAtelierArchi from "../assets/imgSiteLAtelierArchi.jpg";
               class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
               >Tailwind</span
             >
-            <span
-              class="px-3 py-1 bg-artisan-text/5 text-artisan-text text-sm rounded-md font-medium"
-              >o2switch</span
-            >
           </div>
 
           <a
-            href="https://www.l-eclat.william-sart.fr"
+            href="https://pressingsaintjean.fr/"
             target="_blank"
             class="inline-flex items-center gap-2 text-artisan-accent font-semibold hover:text-artisan-accent-hover transition-colors"
           >
-            Explorer la démo
+            Voir le site
             <span class="text-xl">→</span>
           </a>
         </div>
@@ -168,6 +170,7 @@ import imgSiteLAtelierArchi from "../assets/imgSiteLAtelierArchi.jpg";
           </a>
         </div>
       </div>
+      
     </div>
   </div>
 </section>
