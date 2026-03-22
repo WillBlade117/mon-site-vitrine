@@ -1,43 +1,31 @@
-# Astro Starter Kit: Minimal
+# william-sart.fr | Site Vitrine Professionnel
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Ce dépôt contient le code source de mon site vitrine personnel. Cette plateforme présente mes services de **Micro-Entrepreneur Web** dédiés aux TPE, artisans et commerçants.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🎯 Objectifs du projet
 
-## 🚀 Project Structure
+Ce site a été conçu pour être une vitrine technique exemplaire, illustrant mes engagements professionnels :
+* **Performance & SEO** : Utilisation de technologies modernes pour garantir un temps de chargement minimal et un référencement optimal.
+* **Accessibilité des services** : Présentation détaillée des offres de création de sites vitrines et d'applications métiers.
+* **Éthique numérique** : Une architecture nativement **RGPD friendly** respectant les standards du web.
+* **Transparence** : Affichage clair des tarifs de maintenance et d'hébergement pour instaurer une relation de confiance dès le premier contact.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠 Stack Technique
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Le projet s'appuie sur une stack moderne axée sur l'efficacité :
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+* **Framework** : [Astro 5](https://astro.build/) pour une génération de site statique performante.
+* **Styles** : [Tailwind CSS](https://tailwindcss.com/) pour un design sur mesure et responsive.
+* **Typographies** : Inter et Merriweather, choisies pour leur lisibilité et leur élégance.
+* **Optimisation** : Intégration d'un sitemap automatique pour le SEO.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## ✨ Fonctionnalités clés
 
-Any static assets, like images, can be placed in the `public/` directory.
+* **Portfolio** : Vitrine des projets réalisés pour mes clients.
+* **Services & Tarifs** : Détail complet des prestations et des forfaits de maintenance.
+* **Offre de lancement** : Présentation de l'offre spéciale de -50 % pour les premiers projets.
+* **Accompagnement** : Mise en avant de la disponibilité et d'un suivi ultra-personnalisé.
 
-## 🧞 Commands
+## 🚀 Accès au site
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Le site est consultable en direct à l'adresse : **[https://william-sart.fr](https://william-sart.fr)**.
